@@ -20,5 +20,7 @@ do
     cd ..
 done
 if [$id -eq 0]
-tail -F node1/message.log
+then
+    tail -F node1/message.log
+fi
 
