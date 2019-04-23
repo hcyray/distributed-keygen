@@ -15,6 +15,12 @@ echo "Machine $id is ready!"
 a=9000
 b=0
 
+if [$1 \eq 0]
+then
+    b=1
+    ((a++))
+fi
+
 for ((x=id*8+1+b; x<=id*8+8; x++))
 do
     cd node$x
