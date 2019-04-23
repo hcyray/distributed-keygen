@@ -1,8 +1,16 @@
 #!/bin/bash
 
 id=$1
+a=9000
+b=0
 
-for ((x=id*8+1; x<=id*8+8; x++))
+if [ $1 -eq 0 ]
+then
+    b=1
+    ((a++))
+fi
+
+for ((x=id*8+1+b; x<=id*8+8; x++))
 do
     rm -r node$x
     mkdir node$x
@@ -12,14 +20,7 @@ do
 done
 
 echo "Machine $id is ready!"
-a=9000
-b=0
 
-if [ $1 -eq 0 ]
-then
-    b=1
-    ((a++))
-fi
 
 for ((x=id*8+1+b; x<=id*8+8; x++))
 do
