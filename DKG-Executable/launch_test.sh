@@ -28,5 +28,3 @@ do
     cd ..
     ((a++))
 done
-
-tail -F node1/message.log
