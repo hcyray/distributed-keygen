@@ -19,7 +19,7 @@ do
     ../node_8_0 $a ../certs/$x.pem ../certs/$x-key.pem ../contlist 0 0 0 &
     cd ..
 done
-if ((id==1))
+if ((id==0))
 then
     tail -F node1/message.log
 fi
