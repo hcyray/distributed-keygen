@@ -15,7 +15,7 @@ echo "Machine $id is ready!"
 a=9000
 b=0
 
-if [$1 -eq 0]
+if [ $1 -eq 0 ]
 then
     b=1
     ((a++))
