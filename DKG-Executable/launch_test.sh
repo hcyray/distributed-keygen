@@ -1,6 +1,6 @@
 #!/bin/bash
 
-id = $1
+id=$1
 
 for ((x=id*8+1; x<=id*8+8; x++))
 do
@@ -19,7 +19,7 @@ do
     ../node_8_0 $a ../certs/$x.pem ../certs/$x-key.pem ../contlist 0 0 0 &
     cd ..
 done
-if ((id == 1))
+if ((id==1))
 then
     tail -F node1/message.log
 fi
