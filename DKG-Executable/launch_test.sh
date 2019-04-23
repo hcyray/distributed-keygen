@@ -6,7 +6,9 @@ function launch () {
     ./node_8_0 $port certs/$id.pem certs/$id-key.pem contlist 0 0 0
 }
 
-for x in `seq 1 8`
+id = $1
+
+for x in `seq $id*8+1 $id*8+8`
 do
     rm -r node$x
     mkdir node$x
@@ -16,7 +18,7 @@ do
 done
 
 a=9000
-for x in `seq 1 8`
+for x in `seq $id*8+1 $id*8+8`
 do
     cd node$x
     ((a++))
