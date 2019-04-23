@@ -2,7 +2,7 @@
 
 id = $1
 
-for x in `seq ((id*8+1)) ((id*8+8))`
+for ((x=id*8+1; x<=id*8+8; x++))
 do
     rm -r node$x
     mkdir node$x
@@ -12,7 +12,7 @@ do
 done
 
 a=9000
-for x in `seq ((id*8+1)) ((id*8+8))`
+for ((x=id*8+1; x<=id*8+8; x++))
 do
     cd node$x
     ((a++))
