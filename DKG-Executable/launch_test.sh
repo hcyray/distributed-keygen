@@ -11,6 +11,7 @@ do
     ln -s $PWD/pairing.param node$x/
 done
 
+echo "Machine $id is ready!"
 a=9000
 for ((x=id*8+1; x<=id*8+8; x++))
 do
