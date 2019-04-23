@@ -17,11 +17,12 @@ b=0
 if [$1 \eq 0]
 then
     b=1
+    ((a++))
 fi
 for ((x=id*8+1+b; x<=id*8+8; x++))
 do
     cd node$x
-    ((a++))
     ../node_8_0 $a ../certs/$x.pem ../certs/$x-key.pem ../contlist 0 0 0 &
     cd ..
+    ((a++))
 done
