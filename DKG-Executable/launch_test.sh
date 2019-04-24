@@ -9,7 +9,7 @@ then
     ((a++))
 fi
 
-for ((x=id*4+1+b; x<=id*4+4; x++))
+for ((x=id*8+1+b; x<=id*8+8; x++))
 do
     rm -r node$x
     mkdir node$x
@@ -22,7 +22,7 @@ done
 echo "Machine $id is ready!"
 
 
-for ((x=id*4+1+b; x<=id*4+4; x++))
+for ((x=id*8+1+b; x<=id*8+8; x++))
 do
     cd node$x
     ../node_8_0 $a ../certs/$x.pem ../certs/$x-key.pem ../contlist 0 0 0 &
