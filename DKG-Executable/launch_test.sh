@@ -12,6 +12,7 @@ do
     ln -s $PWD/certs node$x/
     ln -s $PWD/system.param node$x/
     ln -s $PWD/pairing.param node$x/
+    ln -s $PWD/timeout.value node$x/
 done
 
 echo "Machine $id is ready!"
